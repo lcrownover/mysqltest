@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[]) {
     // Check if there are enough command-line arguments
-    if (argc < 2) {
+    if (argc < 4) {
         printf("Usage: %s hostname username password\n", argv[0]);
         return 1; // Exit with an error code
     }
