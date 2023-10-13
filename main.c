@@ -41,6 +41,11 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    printf("tid before is %lu\n", mysql_thread_id(conn));
+    printf("calling mysql_ping()\n");
+    printf("mysql_ping() returned %d\n", mysql_ping(conn));
+    printf("tid after is %lu\n", mysql_thread_id(conn));
+
     // Execute an SQL query to show tables
     if (mysql_query(conn, "SHOW TABLES")) {
         fprintf(stderr, "mysql_query() failed\n");
